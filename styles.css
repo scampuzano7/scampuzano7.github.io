@@ -481,40 +481,40 @@ li.skill {
 /* Contact Form */
 
 form {
-    padding: 10px;
-    margin: 0px 0px 20px 0px;
-    width: 750px;
-    background-color: rgb(53, 93, 129, 0.3);
-    height: 600px;
-    border-radius: 15px;
-    border: 2px solid grey;
-    color: white;
-    overflow: hidden;
-    text-align: center;
-    justify-self: center;
+  padding: 10px;
+  margin: 0px 0px 20px 0px;
+  width: 750px;
+  background-color: rgb(53, 93, 129, 0.3);
+  height: 600px;
+  border-radius: 15px;
+  border: 2px solid grey;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+  justify-self: center;
 }
 
 input {
-  width: 300px;
-  height: 25px;
-  margin: 10px auto 10px auto;
+width: 300px;
+height: 25px;
+margin: 10px auto 10px auto;
 }
 
 textarea {
-  width: 500px;
-  height: 200px;
-  margin: 10px auto;
+width: 500px;
+height: 200px;
+margin: 10px auto;
 }
 
 label {
-  color: pink;
+color: pink;
 }
 
 .subbtn {
-  padding: 10px;
-  border: 1px solid grey;
-  border-radius: 15px;
-  font-size: 12px;
-  background-color: #f1f1f1;
-  color: black;
+padding: 10px;
+border: 1px solid grey;
+border-radius: 15px;
+font-size: 12px;
+background-color: #f1f1f1;
+color: black;
 }
