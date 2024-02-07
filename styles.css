@@ -1,5 +1,20 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  background-color: black;
 }
 
 .header {
@@ -33,59 +48,50 @@ h2 {
   border-bottom: 0.5px solid pink;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    padding: 0;
-    margin: 0;
-    background-color: black;
-
-  }
-  
 /* Stylizaton for the footer/bottom area */
 
-  .footer {
-    background-color: transparent;
-    padding: 10px;
-    font-size: 12px;
-    color: white;
-    border-top: 0.5px solid white;
-    width: 85%;
-    margin: 0px 100px 0px 100px;
-    position: static;
-  }
+.footer {
+  background-color: transparent;
+  padding: 10px;
+  font-size: 12px;
+  color: white;
+  border-top: 0.5px solid white;
+  width: 85%;
+  margin: 0px 100px 0px 100px;
+  position: static;
+}
 
 /* Stylization for navigation bar */
 
 .nav {
   border-bottom: 0.5px solid white;
-    border-top: 0.5px solid white;
-    height: 50px;
-    font-size: 12px;
-    width: 85%;
-    margin-left: 100px;
+  border-top: 0.5px solid white;
+  height: 50px;
+  font-size: 12px;
+  /* 200px removed because of 100px margin on both sides */
+  width: calc(100% - 200px);
+  margin: 50px 0 0 0;
 }
 
 ul {
-    list-style-type: none;
-    overflow: hidden;
+  list-style-type: none;
+  overflow: hidden;
 }
-
 
 li {
-    display: inline-block;
+  display: inline-block;
 }
-
 
 /* Dropdown menu */
 
-li a, .dropdownbtn {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    background: transparent;
-    font-size: 14px;
+li a,
+.dropdownbtn {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  font-size: 14px;
 }
 
 .dropdownbtn {
@@ -96,47 +102,49 @@ li a {
   padding: 12px 16px;
 }
 
-li a:hover, .dropdown:hover .dropdownbtn {
+li a:hover,
+.dropdown:hover .dropdownbtn {
   color: pink;
 }
 
 li.dropdown {
-    display: inline-block;
+  display: inline-block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background: black;
+  outline: 1px solid white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 /* Icon links to GH, LinkedIN, Poly */
 .iconlinks {
-    color: black;
-    padding: 5px;
-    display: flex;
-    width: 10%;
-    float: right;
-    margin: 0px 15px 25px 15px;
+  color: black;
+  padding: 5px;
+  display: flex;
+  width: 10%;
+  float: right;
+  margin: 0px 15px 25px 15px;
 }
 
 .linkspace {
-    padding: 5px;
+  padding: 5px;
 }
 
 /* Containers for layout*/
@@ -188,8 +196,18 @@ li.dropdown {
 
 /* Each skill's box */
 
-.htmlbox, .cssbox, .jsbox, .reactBox, .pybox, .cbox, .herokuBox, 
-.nodeBox, .mongobox, .flaskbox, .blenderbox, .pfbox {
+.htmlbox,
+.cssbox,
+.jsbox,
+.reactBox,
+.pybox,
+.cbox,
+.herokuBox,
+.nodeBox,
+.mongobox,
+.flaskbox,
+.blenderbox,
+.pfbox {
   padding: 0;
   width: 100px;
   height: 100px;
@@ -198,133 +216,172 @@ li.dropdown {
 
 /* Grid placement of each skill */
 
-.htmlbox, .cssbox, .jsbox, .reactBox {
+.htmlbox,
+.cssbox,
+.jsbox,
+.reactBox {
   grid-row: 1;
 }
 
-.pybox, .cbox, .herokuBox, .flaskbox {
+.pybox,
+.cbox,
+.herokuBox,
+.flaskbox {
   grid-row: 2;
 }
 
-.nodeBox, .mongobox, .blenderbox, .pfbox {
+.nodeBox,
+.mongobox,
+.blenderbox,
+.pfbox {
   grid-row: 3;
 }
 
-.htmlbox, .pybox, .mongobox {
+.htmlbox,
+.pybox,
+.mongobox {
   grid-column: 1;
 }
 
-.cssbox, .flaskbox, .mongobox {
+.cssbox,
+.flaskbox,
+.mongobox {
   grid-column: 2;
 }
 
-.jsbox, .herokuBox, .blenderbox {
+.jsbox,
+.herokuBox,
+.blenderbox {
   grid-column: 3;
 }
 
-.reactBox, .cbox, .pfbox {
+.reactBox,
+.cbox,
+.pfbox {
   grid-column: 4;
 }
 
 /* Slideshow container */
+.sitecontainer.about {
+  gap: 20px;
+}
 .slideShow {
-    padding: 0px;
-    margin: 10px 0px 0px 0px;
-    width: 500px;
-    border-radius: 15px;
-    overflow: hidden;
-    height: 630px;
-    position: relative;
-    grid-column: 2;
-    grid-row: 1;
+  padding: 0px;
+  margin: 10px 0px 0px 0px;
+  width: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 630px;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 /* Align the images */
 
 .slideShow img {
-    vertical-align: middle;
-    height: 600px;
-    border-radius: 15px;
+  vertical-align: middle;
+  height: 600px;
+  border-radius: 15px;
 }
 
 /* Slideshow Buttons */
 
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 43%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 15%;
-    user-select: none;
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 43%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 15%;
+  user-select: none;
 }
 
 .next {
-    right: 0;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-
-  .prev:hover,
-  .next:hover {
-    background-color: black;
-  }
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 15px 2px;
-    background-color: black;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-
+  right: 0;
 }
 
-.active, .dot:hover {
-    background-color: pink;
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+  background-color: black;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 15px 2px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: pink;
 }
 
 .mySlides {
-    display: none;
+  display: none;
 }
 
 /* Fading animation */
 
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
   }
-  @-webkit-keyframes fade {
-    from {
-      opacity: .4
-    }
-    to {
-      opacity: 1
-    }
+  to {
+    opacity: 1;
   }
-  @keyframes fade {
-    from {
-      opacity: .4
-    }
-    to {
-      opacity: 1
-    }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
   }
+  to {
+    opacity: 1;
+  }
+}
 
-  /* Resume */
+/* Resume */
 
-  .resumeOne, .resumeTwo, .resumeThree, .resumeFour, .resumeFive, .uniOne, .uniTwo, .uniThree, .lang, .cert {
+.sitecontainer.resume {
+  margin-top: 2.5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.resumeOne,
+.resumeTwo,
+.resumeThree,
+.resumeFour,
+.resumeFive,
+.uniOne,
+.uniTwo,
+.uniThree,
+.lang,
+.cert {
   padding: 20px;
-  margin: 25px 0px 0px 100px;
   width: 800px;
   background-color: rgb(53, 93, 129, 0.3);
   height: 250px;
@@ -335,47 +392,9 @@ li.dropdown {
   font-size: 12px;
   display: grid;
   overflow: hidden;
+  margin: 0;
 }
 
-.resumeOne {
-  grid-row: 1;
-}
-
-.resumeTwo {
-  grid-row: 2;
-}
-
-.resumeThree {
-  grid-row: 3;
-}
-
-.resumeFour {
-  grid-row: 4;
-}
-
-.resumeFive {
-  grid-row: 5;
-}
-
-.uniOne {
-  grid-row: 6;
-}
-
-.uniTwo {
-  grid-row: 7;
-}
-
-.uniThree {
-  grid-row: 8;
-}
-
-.lang {
-    grid-row: 9;
-  }
-
-  .cert {
-    grid-row: 10;
-  }
 
 /* Titles */
 
@@ -397,7 +416,6 @@ li.skill {
   padding: 10px;
 }
 
-
 /* About me container */
 
 .aboutme {
@@ -417,14 +435,13 @@ li.skill {
 .aboutme .content {
   height: 100%;
   overflow-y: auto;
-  padding-right: 10px
+  padding-right: 10px;
 }
 
 .content a {
   text-decoration: none;
   color: pink;
 }
-
 
 /* Stylization for the scroll bar, thumb, and track */
 
