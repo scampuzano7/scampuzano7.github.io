@@ -597,3 +597,52 @@ font-size: 12px;
 background-color: #f1f1f1;
 color: black;
 }
+
+.tabOne {
+  padding: 20px;
+  margin: 0px 0px 0px 10px;
+  width: 800px;
+  background-color: rgb(53, 93, 129, 0.3);
+  height: 600px;
+  border-radius: 15px;
+  grid-row: 1;
+  grid-column: 1;
+  border: 2px solid grey;
+  color: white;
+  overflow: hidden;
+}
+
+.tabTwo {
+  padding: 20px;
+  margin: 0px 0px 0px 10px;
+  width: 800px;
+  background-color: rgb(53, 93, 129, 0.3);
+  height: 600px;
+  border-radius: 15px;
+  grid-row: 1;
+  grid-column: 2;
+  border: 2px solid grey;
+  color: white;
+  overflow: hidden;
+}
+
+.tabOne img,
+.tabTwo img{
+  width: 100%;
+  height: 100%;
+}
+
+.tabCSV {
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 80%;
+  width: 50%;
+  background-color: rgb(53, 93, 129, 0.3);
+  height: 50px;
+  border-radius: 15px;
+  grid-row: 2;
+  border: 2px solid grey;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+}
