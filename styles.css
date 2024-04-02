@@ -646,3 +646,79 @@ color: black;
   overflow: hidden;
   text-align: center;
 }
+/* Welcome page styling */
+/* Welecome page video */
+/* Video credit: 8 Bit Stock Video by notjungcg
+on Vecteezy - https://www.vecteezy.com/free-videos/8-bit*/
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Text animation */
+.textoverlay {
+position: relative;
+font-size: 80px;
+padding: 10px;
+overflow: hidden;
+white-space: nowrap;
+text-align: center;
+margin-top: 40%;
+animation: typing 5s steps(30, end) forwards, blink 1s infinite;
+border-right: 2px solid black;
+width: 0;
+font-style: italic;
+}
+
+.text80s {
+  background: -webkit-linear-gradient(#3526a3 30%,white 45%,#e94fb3 50%,#470569 60%,#c20c83 65%,white 85%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: silver;
+  -webkit-text-stroke-width: 1px;
+  filter: drop-shadow(4px 4px 1px black)
+          drop-shadow(2px 2px 2px #c20c83)
+          drop-shadow(2px 2px 2px #470569)
+          drop-shadow(2px 2px 2px #f951c2);
+}
+
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+@keyframes blink {
+  from {border-color: transparent}
+  to {border-color: white}
+}
+
+/* Welcome page button */
+.welcomebtn {
+  padding: 20px 60px;
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  animation-delay: 4.5s;
+}
+
+.welcomebtn a {
+  color: chartreuse;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
