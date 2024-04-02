@@ -14,7 +14,9 @@ body {
   line-height: 1.5;
   padding: 0;
   margin: 0;
-  background-color: black;
+  background-image: url(images/vapobg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .header {
@@ -135,7 +137,7 @@ li.dropdown {
 
 /* Icon links to GH, LinkedIN, Poly */
 .iconlinks {
-  color: black;
+  color: transparent;
   padding: 5px;
   display: flex;
   width: 10%;
@@ -167,7 +169,7 @@ li.dropdown {
   border-radius: 15px;
   grid-row: 1;
   grid-column: 1;
-  border: 2px solid grey;
+  border: 2px solid silver;
   color: white;
   overflow: hidden;
 }
@@ -183,7 +185,7 @@ li.dropdown {
   border-radius: 15px;
   grid-row: 2;
   grid-column: 1;
-  border: 2px solid grey;
+  border: 2px solid silver;
   color: white;
   overflow: hidden;
   text-align: center;
@@ -204,7 +206,7 @@ li.dropdown {
   border-radius: 15px;
   grid-row: 3;
   grid-column: 1;
-  border: 2px solid grey;
+  border: 2px solid silver;
   color: white;
   position: relative;
   display: grid;
@@ -287,7 +289,7 @@ li.dropdown {
 
 /* Slideshow container */
 .sitecontainer.about {
-  gap: 20px;
+  gap: 100px;
 }
 .slideShow {
   padding: 0px;
@@ -413,7 +415,7 @@ li.dropdown {
   background-color: rgb(53, 93, 129, 0.3);
   height: 265px;
   border-radius: 15px;
-  border: 2px solid grey;
+  border: 2px solid silver;
   color: white;
   grid-column: 1;
   font-size: 12px;
@@ -475,40 +477,18 @@ li.dropdown {
 
 .aboutme {
   padding: 20px;
-  margin: 10px 0px 0px 100px;
+  margin: 10px 0px 0px 50px;
   width: 550px;
   background-color: rgb(53, 93, 129, 0.3);
   height: 600px;
   border-radius: 15px;
   grid-row: 1;
   grid-column: 1;
-  border: 2px solid grey;
+  border: 2px solid silver;
   color: white;
   font-size: 14px;
   display: flex;
   justify-content: center;
-}
-
-.aboutme .content {
-  height: 100%;
-  overflow-y: auto;
-  padding-right: 10px;
-}
-
-/* About me container */
-
-.aboutme {
-  padding: 20px;
-  margin: 10px 0px 0px 100px;
-  width: 550px;
-  background-color: rgb(53, 93, 129, 0.3);
-  height: 600px;
-  border-radius: 15px;
-  grid-row: 1;
-  grid-column: 1;
-  border: 2px solid grey;
-  color: white;
-  font-size: 14px;
 }
 
 .aboutme .content {
@@ -561,12 +541,12 @@ li.dropdown {
 
 form {
   padding: 10px;
-  margin: 0px 0px 20px 0px;
+  margin: 20px 0px 20px 0px;
   width: 750px;
   background-color: rgb(53, 93, 129, 0.3);
   height: 600px;
   border-radius: 15px;
-  border: 2px solid grey;
+  border: 2px solid silver;
   color: white;
   overflow: hidden;
   text-align: center;
@@ -577,12 +557,14 @@ input {
 width: 300px;
 height: 25px;
 margin: 10px auto 10px auto;
+border-radius: 15px;
 }
 
 textarea {
 width: 500px;
 height: 200px;
 margin: 10px auto;
+border-radius: 15px;
 }
 
 label {
@@ -591,7 +573,7 @@ color: pink;
 
 .subbtn {
 padding: 10px;
-border: 1px solid grey;
+border: 1px solid silver;
 border-radius: 15px;
 font-size: 12px;
 background-color: #f1f1f1;
@@ -645,4 +627,97 @@ color: black;
   color: white;
   overflow: hidden;
   text-align: center;
+}
+/* Welcome page styling */
+/* Welecome page video */
+/* Video credit: 8 Bit Stock Video by notjungcg
+on Vecteezy - https://www.vecteezy.com/free-videos/8-bit*/
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Text animation */
+.textoverlay {
+position: relative;
+font-size: 80px;
+padding: 10px;
+overflow: hidden;
+white-space: nowrap;
+text-align: center;
+margin-top: 40%;
+animation: typing 5s steps(30, end) forwards, blink 1s infinite;
+border-right: 2px solid black;
+width: 0;
+font-style: italic;
+}
+
+.text80s {
+  background: -webkit-linear-gradient(#3526a3 30%,white 45%,#e94fb3 50%,#470569 60%,#c20c83 65%,white 85%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: silver;
+  -webkit-text-stroke-width: 1px;
+  filter: drop-shadow(4px 4px 1px black)
+          drop-shadow(2px 2px 2px #c20c83)
+          drop-shadow(2px 2px 2px #470569)
+          drop-shadow(2px 2px 2px #f951c2);
+}
+
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+@keyframes blink {
+  from {border-color: transparent}
+  to {border-color: white}
+}
+
+/* Welcome page button */
+.welcomebtn {
+  padding: 20px 60px;
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  animation-delay: 4.5s;
+}
+
+.welcomebtn a {
+  color: silver;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade in to home page from welcome page upon clicking play button */
+
+.pageFade {
+  animation: fadeIn ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
